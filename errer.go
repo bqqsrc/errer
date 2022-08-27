@@ -13,7 +13,6 @@ func (e *callerErr) Error() string {
 	return fmt.Sprintf(fmtStr, e.args...)
 }
 
-//test
 func CallerErr(caller, format string, args ...interface{}) error {
 	return &callerErr{caller, format, args}
 }
